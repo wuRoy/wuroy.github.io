@@ -1,0 +1,15 @@
+# Jekyll build output (GitHub Pages builds this itself from source)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby / bundler
+vendor/
+.bundle/
+
+# macOS
+.DS_Store
+
+# Working drafts (internal notes, not for publishing)
+context/

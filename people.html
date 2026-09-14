@@ -1,0 +1,38 @@
+---
+layout: default
+title: People
+---
+
+<div class="page">
+  <header class="page-header">
+    <h1 class="page-title">People</h1>
+  </header>
+
+  <div class="page-content">
+    {% assign group_names = "Principal Investigator,Postdocs,PhD Students,Master Students,Undergraduates" | split: "," %}
+    {% for group in group_names %}
+    {% assign members = site.people | where: "group", group %}
+    <div class="people-group">
+      <h2 class="people-group-title">{{ group }}</h2>
+
+      {% if members.size == 0 %}
+      <p class="people-empty">Could be you!</p>
+      {% endif %}
+
+      {% for person in members %}
+      <div class="person-card">
+        <img src="{{ person.photo | relative_url }}" alt="{{ person.name }}" class="person-photo">
+        <div class="person-info">
+          <h3 class="person-name">
+            {{ person.name }}
+            {% include person_icons.html person=person %}
+          </h3>
+          <p class="person-role">{{ person.role }}</p>
+          <div class="person-bio">{{ person.content | markdownify }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</div>

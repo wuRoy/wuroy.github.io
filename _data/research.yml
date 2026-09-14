@@ -1,0 +1,33 @@
+# Research intro (displayed at the top of the research page)
+intro: |
+  Polymers are everywhere in our lives, from plastics to proteins. Their design space is enormous, ranging from monomer structure and composition to blockiness, sequence, and molecular weight. This breadth gives ample room for designed function, as we see in systems as different as plastics, hydrogels, and enzymes. That same diversity makes discovery difficult. Experimentally, the space is hard to enumerate; even a narrow region of it demands significant synthesis and characterization labor. Computationally, the systems are often too complex and too disordered to simulate reliably. Our mission is to understand and engineer complex macromolecular systems for healthcare and sustainability, drawing on synthetic chemistry and biophysics alongside laboratory automation, machine learning, and single-molecule technology. We aim to deliver the materials as well as the tools to facilitate the discovery.
+
+  At the moment, the lab is interested in engineering proteins and random heteropolymers (RHPs), polymers prepared through copolymerization of different monomers. We will mainly focus on three directions:
+
+# Research areas
+areas:
+  - title: "High-Throughput and Automation-Ready Methods for Polymer Synthesis and Characterization"
+    details: |
+      Lab automation is a powerful way to extend how much chemical space we can explore. However, not every polymerization technique is amenable to today's high-throughput and automation platforms. We are interested in developing polymer chemistries and methods amenable to automation and high-throughput platforms. This includes polymerizations and post-polymerization modifications that are highly efficient and robust, and processes suited to hardware constraints. It also means characterizing how experimental parameters govern the resulting polymers, so synthesis conditions can be mapped directly onto the chemical structure. With a well-characterized set of chemistries in hand, we wish to infer structural information, such as composition and chain length, from what was added rather than measuring it after the fact.
+
+      Characterization is the usual bottleneck in automated materials discovery, and it is often overlooked. Alongside synthesis, we are also interested in developing surrogate measurements for diverse polymer properties, such as protein stabilization, catalytic performance, and mechanical behavior. The aim is a set of assays that are quick, reproducible, and predictive enough of the property of interest to serve as the objective in an iterative design campaign.
+    publications:
+      - "A high-throughput platform for efficient exploration of functional polypeptide chemical space"
+      - "Optimization of robotic liquid handling as a capacitated vehicle routing problem"
+      - "Data-driven design of random heteropolypeptides as synthetic polyclonal antibodies"
+
+  - title: "Machine Learning and Design of Macromolecular Ensembles"
+    details: |
+      Most machine learning for many macromolecular systems assumes one sequence, one structure. However, many polymer systems we care about do not fit this paradigm. For example, a random heteropolymer sample is not a single type of molecule but a set of molecules sampled from a distribution over sequences and compositions. A disordered protein or a weakly associating complex is a single sequence but not a single structure, and its behavior follows from the population of conformations it samples. Beyond polymers, the same holds for formulations and molecular mixtures, where properties depend on composition and the collective behavior of individual components. We aim to develop machine learning methods that model the ensemble, rather than the individual molecule.
+
+      The inverse design has the same structure. Designing a polymer ensemble means specifying the parameters that define a distribution (composition, blockiness, chain-length range) rather than a defined sequence, and the function that results is a property of the population rather than of any chain within it. This is in contrast with protein design, where function is encoded in an exactly specified sequence. We are curious about the questions in between: how much sequence precision a given function actually requires, and which functions can be achieved statistically. We are interested in building generative models for macromolecular ensembles, and validating them through experiments.
+    publications:
+      - "Seeking precise protein-like functions from random heteropolymer ensemble and through dimensionality reduction"
+      - "Autonomous discovery of functional random heteropolymer blends through evolutionary formulation optimization"
+
+  - title: "Polymers for Sustainable Biocatalysis"
+    details: |
+      We are interested in designing synthetic polymers that mimic or engage biological macromolecules in order to address these limitations, using them to stabilize, solubilize, and organize enzymes under conditions that practical catalysis requires. We will leverage methods from polymer chemistry and protein engineering, together with technologies such as laboratory automation, machine learning, and single-molecule sensing. Interactions between synthetic polymers and proteins remain poorly characterized compared with protein–protein interactions, in part because the polymer side is statistical and resists the structural description that biochemistry is built around. We therefore hope to deliver both the materials themselves and an understanding of how such synthetic systems engage proteins — what a disordered synthetic chain must contain in order to bind a folded partner reliably.
+    publications:
+      - "A high-throughput platform for efficient exploration of functional polypeptide chemical space"
+      - "Autonomous discovery of functional random heteropolymer blends through evolutionary formulation optimization"

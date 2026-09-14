@@ -1,0 +1,29 @@
+# Join Us page content
+
+# Intro text shown at the top of the page (Markdown supported)
+intro: |
+  We are currently looking for passionate undergraduate students, Master's students, PhD students, and postdoctoral researchers to join the group. Both domestic and international applicants are welcome.
+
+  We welcome applicants with backgrounds including (but not limited to):
+
+  - Chemical synthesis (organic, polymer, or peptide chemistry)
+  - Single-molecule imaging / single-molecule biophysics
+  - Protein engineering
+  - Computational science (machine learning, cheminformatics, or simulation)
+
+  No single training background covers all directions of the lab: we encourage interdisciplinary and collaborative research, and whether you come from an experimental or a computational background, you will have the opportunity to learn and work across disciplines. If you are eager to step out of your comfort zone and try something new, this is the right place for you.
+
+  **How to apply:** Please send your CV and a brief statement of interest (200–300 words, in Chinese or English) describing what you wish to pursue or what research excites you to Guangqi.
+
+# Optional contact email for the "get in touch" link.
+# Leave empty to use the site-wide email from _config.yml (social.email).
+email: ""
+
+# Open positions. Leave the list empty (positions: []) to hide the section.
+# Add one block per position:
+# positions:
+#   - title: "PhD Students"
+#     description: |
+#       What the project involves, the background you are looking for,
+#       and how to apply. Markdown works here.
+positions: []

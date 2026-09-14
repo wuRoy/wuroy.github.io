@@ -1,0 +1,64 @@
+---
+layout: default
+title: Publications
+---
+
+<div class="page">
+  <header class="page-header">
+    <h1 class="page-title">Publications</h1>
+    {% if site.social.google_scholar %}
+    <a href="{{ site.social.google_scholar }}" class="scholar-profile-link" target="_blank">Google Scholar &rarr;</a>
+    {% endif %}
+  </header>
+
+  <div class="page-content">
+
+    {%- if site.data.preprints and site.data.preprints.size > 0 -%}
+    <div class="publications-year-section">
+      <h2 class="publications-year-header">Preprints</h2>
+      <ul class="publication-list">
+        {%- for pub in site.data.preprints -%}
+        <li class="publication-item">
+          <p class="publication-item-line">
+            {{ pub.authors }}.
+            {{ pub.title }}.
+            <span class="publication-journal">{{ pub.venue }}</span>
+            <span class="publication-year"><strong>{{ pub.year }}</strong></span>.
+            {%- if pub.doi %} <a href="{{ pub.doi }}" target="_blank" class="publication-doi-link" aria-label="DOI link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>{% endif -%}
+          </p>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- endif -%}
+
+    {% assign publications_by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+    {%- for year_group in publications_by_year -%}
+    <div class="publications-year-section">
+      <h2 class="publications-year-header">{{ year_group.name }}</h2>
+      <ul class="publication-list">
+        {%- for pub in year_group.items -%}
+        <li class="publication-item">
+          <p class="publication-item-line">
+            {{ pub.authors }}.
+            {{ pub.title }}.
+            <span class="publication-journal">{{ pub.venue }}</span>
+            <span class="publication-year"><strong>{{ pub.year }}</strong></span>,
+            {%- if pub.volume %} <span class="publication-volume">{{ pub.volume }}</span>,{% endif -%}
+            {%- if pub.pages %} <span class="publication-pages">{{ pub.pages }}</span>.{% endif -%}
+            {%- if pub.note %} <span class="publication-note">[{{ pub.note }}]</span>{% endif -%}
+            <a href="{{ pub.doi }}" target="_blank" class="publication-doi-link" aria-label="DOI link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+          </p>
+          {%- if pub.pdf or pub.code -%}
+          <p class="publication-links">
+            {%- if pub.pdf -%}<a href="{{ pub.pdf }}" class="pub-link" target="_blank">PDF</a>{%- endif -%}
+            {%- if pub.code -%}<a href="{{ pub.code }}" class="pub-link" target="_blank">Code</a>{%- endif -%}
+          </p>
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- endfor -%}
+  </div>
+</div>

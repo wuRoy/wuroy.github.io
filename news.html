@@ -1,0 +1,30 @@
+---
+layout: default
+title: News
+---
+
+<div class="page">
+  <header class="page-header">
+    <h1 class="page-title">News</h1>
+  </header>
+
+  <div class="page-content">
+    {% assign sorted_news = site.news | sort: 'date' | reverse %}
+    {% for item in sorted_news %}
+    <article class="news-post-preview">
+      <span class="news-post-date">{{ item.date | date: "%B %d, %Y" }}</span>
+      <h2 class="news-post-title">
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      </h2>
+      {% if item.image %}
+      <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" class="news-post-preview-image">
+      {% endif %}
+      <p class="news-post-excerpt">{{ item.content | strip_html | truncate: 280 }}</p>
+    </article>
+    {% endfor %}
+
+    {% if site.news.size == 0 %}
+    <p>No news yet. Check back soon!</p>
+    {% endif %}
+  </div>
+</div>

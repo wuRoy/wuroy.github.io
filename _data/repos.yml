@@ -1,0 +1,14 @@
+- name: "CVRP_pipette_scheduling"
+  description: "Optimization of robotic liquid handling as a capacitated vehicle routing problem"
+  url: "https://github.com/wuRoy/CVRP_pipette_scheduling.git"
+  language: "Python"
+
+- name: "RHPB_optimization"
+  description: "Autonomous discovery of random heteropolymer blends with lab automation and optimization algorithms"
+  url: "https://github.com/wuRoy/RHPB_optimization.git"
+  language: "Python"
+
+- name: "VAE_contour_plot"
+  description: "A tool for illustrating latent space"
+  url: "https://github.com/wuRoy/VAE_contour_plot.git"
+  language: "Python"

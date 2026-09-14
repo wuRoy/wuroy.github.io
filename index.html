@@ -1,0 +1,63 @@
+---
+layout: default
+title: Home
+---
+
+<div class="page home-page">
+  <header class="page-header home-header">
+    <h1 class="page-title home-title">Wu Research Group</h1>
+    <p class="home-subtitle">Institute of Frontier Chemistry, School of Chemistry and Chemical Engineering &middot; Shandong University</p>
+  </header>
+
+  <div class="page-content home-content">
+    <section class="image-carousel-section home-carousel">
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carousel-track">
+          <div class="carousel-slide">
+            <img src="/assets/images/carousel-2.jpg" alt="Lab work">
+            <span class="carousel-caption">High-throughput polymer synthesis</span>
+          </div>
+          <div class="carousel-slide">
+            <img src="/assets/images/carousel-3.jpg" alt="Equipment">
+            <span class="carousel-caption">Self-driving polymer blend discovery</span>
+          </div>
+          <div class="carousel-slide">
+            <img src="/assets/images/carousel-1.jpg" alt="Team discussion">
+            <span class="carousel-caption">Scheduling methods for automated experiments</span>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous slide">&#10094;</button>
+        <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next slide">&#10095;</button>
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+    </section>
+
+    <p class="home-intro">
+      We are an experimental group at the Institute of Frontier Chemistry, School of Chemistry and Chemical Engineering, Shandong University, working at the intersection of chemistry, polymer science, lab automation, and machine learning. 
+      We develop and apply technologies to accelerate the discovery of synthetic polymers and understand biological systems, with an emphasis on generating scalable, high-quality data from experiments. 
+      We are currently interested in random heteropolymers and de novo designed proteins for biocatalysis.
+    </p>
+
+    <p class="home-intro">
+      We value interdisciplinary research and collective growth, and are actively recruiting from a range of backgrounds in chemistry, polymer science, protein engineering, robotics, and machine learning. 
+      Whether you come from the experimental or the computational side, if you want to learn things outside what you already know, we would like to hear from you!
+
+    </p>
+
+
+
+    <h2 class="section-title">Recent News</h2>
+    <ul class="news-list home-news-list">
+      {% assign recent_news = site.news | sort: 'date' | reverse | limit: 4 %}
+      {% for item in recent_news %}
+      <li class="news-item home-news-item">
+        <span class="news-date">{{ item.date | date: "%B %Y" }}</span>
+        <span class="news-text"><a href="{{ item.url | relative_url }}">{{ item.title }}</a>. {{ item.content | strip_html | truncate: 120 }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="all-news-link">
+      <a href="{{ '/news' | relative_url }}">View all news &rarr;</a>
+    </p>
+  </div>
+</div>

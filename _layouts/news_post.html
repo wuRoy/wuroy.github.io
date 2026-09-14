@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %d, %Y" }}
+      </time>
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  {% if page.image %}
+  <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="news-post-image">
+  {% endif %}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <a href="{{ '/news' | relative_url }}" class="back-link">&larr; Back to all news</a>
+  </footer>
+</article>

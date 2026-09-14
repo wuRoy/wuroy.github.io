@@ -1,0 +1,49 @@
+---
+layout: default
+title: Research
+---
+
+<div class="page">
+  <header class="page-header">
+    <h1 class="page-title">Research</h1>
+  </header>
+
+  <div class="page-content">
+    <blockquote class="research-quote">
+      <p>&ldquo;When a system is complex enough, will functions inevitably emerge? If so, how do we find them?&rdquo;</p>
+    </blockquote>
+
+    {% if site.data.research.intro %}
+    <div class="research-intro">{{ site.data.research.intro | markdownify }}</div>
+    {% endif %}
+
+    {% for area in site.data.research.areas %}
+    <section class="research-section">
+      <h2 class="research-section-title">{{ area.title }}</h2>
+
+      {% if area.description %}
+      <p class="research-section-description">{{ area.description }}</p>
+      {% endif %}
+
+      {% if area.details %}
+      <div class="research-section-details">{{ area.details | markdownify }}</div>
+      {% endif %}
+
+      {% if area.publications %}
+      <div class="research-section-publications">
+        <p class="research-section-label">Selected publications:</p>
+        <ul>
+          {% for pub_title in area.publications %}
+            {% for pub in site.data.publications %}
+              {% if pub.title == pub_title %}
+              <li>{{ pub.authors | replace: ', ', '; ' }}. {{ pub.title }}. <em>{{ pub.venue }}</em> <strong>{{ pub.year }}</strong>{% if pub.volume %}, <em>{{ pub.volume }}</em>{% if pub.issue %} ({{ pub.issue }}){% endif %}{% endif %}{% if pub.pages %}, {{ pub.pages }}{% endif %}.</li>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </section>
+    {% endfor %}
+  </div>
+</div>

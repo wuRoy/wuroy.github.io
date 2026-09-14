@@ -1,0 +1,29 @@
+---
+layout: default
+title: Join Us
+---
+
+<div class="page">
+  <header class="page-header">
+    <h1 class="page-title">Join Us</h1>
+  </header>
+
+  <div class="page-content">
+    {% if site.data.join.intro %}
+    <div class="join-text">{{ site.data.join.intro | markdownify }}</div>
+    {% endif %}
+
+    {% if site.data.join.positions and site.data.join.positions.size > 0 %}
+    {% for position in site.data.join.positions %}
+    <section class="guide-section">
+      <h2>{{ position.title }}</h2>
+      <div>{{ position.description | markdownify }}</div>
+    </section>
+    {% endfor %}
+    {% endif %}
+
+    <p class="join-contact">
+      Email <a href="mailto:{{ site.data.join.email | default: site.social.email }}">{{ site.data.join.email | default: site.social.email }}</a> with any questions.
+    </p>
+  </div>
+</div>
