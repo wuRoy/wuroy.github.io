@@ -2,6 +2,11 @@
 intro: |
   Polymers are everywhere in our lives, from plastics to proteins. Their design space is enormous, ranging from monomer structure and composition to blockiness, sequence, and molecular weight. This breadth gives ample room for designed function, as we see in systems as different as plastics, hydrogels, and enzymes. That same diversity makes discovery difficult. Experimentally, the space is hard to enumerate; even a narrow region of it demands significant synthesis and characterization labor. Computationally, the systems are often too complex and too disordered to simulate reliably. Our mission is to understand and engineer complex macromolecular systems for healthcare and sustainability, drawing on synthetic chemistry and biophysics alongside laboratory automation, machine learning, and single-molecule technology. We aim to deliver the materials as well as the tools to facilitate the discovery.
 
+  <figure class="research-scheme">
+    <img src="/assets/images/research_scheme.jpg" alt="Overall research scheme of the Wu lab">
+    <figcaption>Overall research of the lab</figcaption>
+  </figure>
+
   At the moment, the lab is interested in engineering proteins and random heteropolymers (RHPs), polymers prepared through copolymerization of different monomers. We will mainly focus on three directions:
 
 # Research areas

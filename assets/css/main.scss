@@ -410,6 +410,21 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   color: $color-text-muted;
 }
 
+.research-scheme {
+  margin: $spacing-unit * 4 0;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+  }
+
+  figcaption {
+    margin-top: $spacing-unit * 1.5;
+    font-size: 0.9rem;
+    color: $color-text-muted;
+  }
+}
+
 .research-section {
   margin-bottom: $spacing-unit * 5;
   padding-bottom: $spacing-unit * 4;

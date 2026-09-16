@@ -52,7 +52,7 @@ title: Home
       {% for item in recent_news %}
       <li class="news-item home-news-item">
         <span class="news-date">{{ item.date | date: "%B %Y" }}</span>
-        <span class="news-text"><a href="{{ item.url | relative_url }}">{{ item.title }}</a>. {{ item.content | strip_html | truncate: 120 }}</span>
+        <span class="news-text"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></span>
       </li>
       {% endfor %}
     </ul>
