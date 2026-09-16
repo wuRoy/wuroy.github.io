@@ -1007,6 +1007,10 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   border-bottom: 1px solid $color-border;
 }
 
+h3.guide-section-title {
+  margin-top: $spacing-unit * 3;
+}
+
 // News Post Preview
 .news-post-preview {
   margin-bottom: $spacing-unit * 4;
