@@ -13,6 +13,23 @@ title: Join Us
     <div class="join-text">{{ site.data.join.intro | markdownify }}</div>
     {% endif %}
 
+    {% if site.data.join.location.text %}
+    <section class="guide-section join-location">
+      <h2>Location</h2>
+      <div class="join-text">{{ site.data.join.location.text | markdownify }}</div>
+      {% if site.data.join.location.figures and site.data.join.location.figures.size > 0 %}
+      <div class="location-figures">
+        {% for fig in site.data.join.location.figures %}
+        <figure class="location-figure{% if fig.wide %} location-figure--wide{% endif %}">
+          <img src="{{ fig.image | relative_url }}" alt="{{ fig.caption }}">
+          <figcaption>{{ fig.caption }}</figcaption>
+        </figure>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </section>
+    {% endif %}
+
     {% if site.data.join.positions and site.data.join.positions.size > 0 %}
     {% for position in site.data.join.positions %}
     <section class="guide-section">

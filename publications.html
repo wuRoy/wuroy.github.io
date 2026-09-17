@@ -11,6 +11,8 @@ title: Publications
     {% endif %}
   </header>
 
+  <p class="publication-legend">* Corresponding author. &dagger; Co-first author (equal contribution).</p>
+
   <div class="page-content">
 
     {%- if site.data.preprints and site.data.preprints.size > 0 -%}
@@ -20,7 +22,7 @@ title: Publications
         {%- for pub in site.data.preprints -%}
         <li class="publication-item">
           <p class="publication-item-line">
-            {{ pub.authors }}.
+            {{ pub.authors | replace: '†*', '##' | replace: '*', '<sup>*</sup>' | replace: '†', '<sup>†</sup>' | replace: '##', '<sup>†*</sup>' }}.
             {{ pub.title }}.
             <span class="publication-journal">{{ pub.venue }}</span>
             <span class="publication-year"><strong>{{ pub.year }}</strong></span>.
@@ -40,7 +42,7 @@ title: Publications
         {%- for pub in year_group.items -%}
         <li class="publication-item">
           <p class="publication-item-line">
-            {{ pub.authors }}.
+            {{ pub.authors | replace: '†*', '##' | replace: '*', '<sup>*</sup>' | replace: '†', '<sup>†</sup>' | replace: '##', '<sup>†*</sup>' }}.
             {{ pub.title }}.
             <span class="publication-journal">{{ pub.venue }}</span>
             <span class="publication-year"><strong>{{ pub.year }}</strong></span>,

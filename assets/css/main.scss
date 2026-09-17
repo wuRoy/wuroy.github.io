@@ -306,6 +306,13 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   border-bottom: 1px solid $color-border;
 }
 
+.publication-legend {
+  color: $color-text-muted;
+  font-size: 0.85rem;
+  margin-top: -$spacing-unit * 3;
+  margin-bottom: $spacing-unit * 5;
+}
+
 .publication-list {
   list-style: none;
 }
@@ -971,6 +978,44 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   a {
     color: $color-accent;
     text-decoration: underline;
+  }
+}
+
+// Location figures (Join Us page)
+.location-figures {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-unit * 3;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.location-figure {
+  margin: 0;
+  text-align: center;
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+  }
+
+  figcaption {
+    margin-top: $spacing-unit * 1.5;
+    font-size: 0.9rem;
+    color: $color-text-muted;
+  }
+}
+
+.location-figure--wide {
+  grid-column: 1 / -1;
+
+  img {
+    width: 100%;
   }
 }
 

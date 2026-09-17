@@ -57,7 +57,9 @@ Every page uses `layout: default`, which wraps content with header + footer.
   posts as **date + linked title only** (no snippet — keep it that way).
 - **Publications** — add an entry to `_data/publications.yml`. Fields: `title`,
   `authors`, `venue`, `year`, plus optional `volume`, `issue`, `pages`, `doi`,
-  `pdf`, `code`, `tags`. The research page links areas to publications **by
+  `pdf`, `code`, `tags`. Append `*` to corresponding authors and `†` to
+  co-first authors inside `authors` — the page renders them as superscripts
+  with a legend. The research page links areas to publications **by
   exact title match**, so titles must be identical in both files.
 - **Research** — edit `_data/research.yml` (`intro`, then `areas` list with
   `title`, `details`, `publications`).
@@ -65,7 +67,9 @@ Every page uses `layout: default`, which wraps content with header + footer.
   (one of: Principal Investigator, Postdocs, PhD Students, Master Students,
   Undergraduates), `role`, `photo`, `email`, `order`; Markdown body is the bio.
 - **Packages** — edit `_data/repos.yml` (`name`, `description`, `url`, `language`).
-- **Join Us** — edit `_data/join.yml` (`intro`, optional `positions` list).
+- **Join Us** — edit `_data/join.yml` (`intro`, optional `location` section with
+  Markdown `text` + `figures` (images with captions; `wide: true` spans a
+  figure across both columns), optional `positions` list).
 - **Site identity** (name, email, social links, hero bio) — edit `_config.yml`.
 - **Nav order** — edit `_includes/header.html`. Current order ends with
   Resources, then **Join Us last** (deliberate; keep it rightmost).
@@ -85,9 +89,10 @@ top — reuse these variables, don't hardcode colors):
 
 Conventions already in use — follow them for consistency:
 
-- Journal names are italicized with `<em>` (e.g. `<em>Nature</em>`,
-  `<em>Journal of the American Chemical Society</em> (JACS)` — abbreviation
-  stays roman).
+- Journal names are italicized with `<em>` (abbreviation stays roman, e.g.
+  `<em>Journal of the American Chemical Society</em> (JACS)`). The Resources
+  page's Journals block is a single list with no publisher names or group
+  headings; journals are listed by their full names.
 - External links use `target="_blank" rel="noopener"`.
 - Section pattern on content pages: `<section class="guide-section"><h2>…</h2><ul>…`.
 
