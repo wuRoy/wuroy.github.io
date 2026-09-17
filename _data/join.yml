@@ -38,7 +38,7 @@ location:
       wide: true
 
     - image: /assets/images/beer_in_bag.jpg
-      caption: "Bagged Tsingtao beer — a Qingdao tradition"
+      caption: "Bagged Tsingtao beer, a Qingdao tradition"
     - image: /assets/images/cat_in_campus.jpg
       caption: "We are waiting for you!"
 
