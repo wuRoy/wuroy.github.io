@@ -70,7 +70,7 @@ Every page uses `layout: default`, which wraps content with header + footer.
 - **Join Us** — edit `_data/join.yml` (`intro`, optional `location` section with
   Markdown `text` + `figures` (images with captions; `wide: true` spans a
   figure across both columns), optional `positions` list).
-- **Site identity** (name, email, social links, hero bio) — edit `_config.yml`.
+- **Site identity** (name, email, social links) — edit `_config.yml`.
 - **Nav order** — edit `_includes/header.html`. Current order ends with
   Resources, then **Join Us last** (deliberate; keep it rightmost).
 

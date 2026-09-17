@@ -36,7 +36,7 @@ title: Research
           {% for pub_title in area.publications %}
             {% for pub in site.data.publications %}
               {% if pub.title == pub_title %}
-              <li>{{ pub.authors | replace: ', ', '; ' }}. {{ pub.title }}. <em>{{ pub.venue }}</em> <strong>{{ pub.year }}</strong>{% if pub.volume %}, <em>{{ pub.volume }}</em>{% if pub.issue %} ({{ pub.issue }}){% endif %}{% endif %}{% if pub.pages %}, {{ pub.pages }}{% endif %}.</li>
+              <li>{{ pub.authors | replace: ', ', '; ' | replace: '†*', '##' | replace: '*', '<sup>*</sup>' | replace: '†', '<sup>†</sup>' | replace: '##', '<sup>†*</sup>' }}. {{ pub.title }}. <em>{{ pub.venue }}</em> <strong>{{ pub.year }}</strong>{% if pub.volume %}, <em>{{ pub.volume }}</em>{% if pub.issue %} ({{ pub.issue }}){% endif %}{% endif %}{% if pub.pages %}, {{ pub.pages }}{% endif %}.</li>
               {% endif %}
             {% endfor %}
           {% endfor %}
