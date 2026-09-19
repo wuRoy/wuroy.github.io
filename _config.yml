@@ -7,7 +7,7 @@ baseurl: ""
 # Author
 author:
   name: Guangqi Wu
-  email: guangqiwu@outlook.com
+  email: guangqiwu@email.sdu.edu.cn
   bio: "About me"
   avatar: /assets/images/avatar.jpg
 
@@ -15,7 +15,7 @@ author:
 social:
   github: https://github.com/wuRoy
   linkedin: https://www.linkedin.com/in/guangqi-wu-a31b02239
-  email: guangqiwu@outlook.com
+  email: guangqiwu@email.sdu.edu.cn
   google_scholar: https://scholar.google.com/citations?user=y7sRCX0AAAAJ&hl=en
 
 # Build Settings

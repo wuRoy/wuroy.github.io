@@ -3,7 +3,7 @@ name: Guangqi Wu
 group: Principal Investigator
 role: Professor
 photo: /assets/images/Guangqi_photo.jpg
-email: guangqiwu@outlook.com
+email: guangqiwu@email.sdu.edu.cn
 order: 1
 ---
 
